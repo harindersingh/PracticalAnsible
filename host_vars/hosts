@@ -1,0 +1,12 @@
+all:
+  hosts:
+    ansible_port: 80
+    ansible_host: 192.0.2.50
+  children:
+    webservers:
+      hosts:
+        foo.example.com:80
+        bar.example.com:80
+    dbservers:
+      hosts:
+        one.example.com:80
